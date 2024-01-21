@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+    <title>GitHub Repository Viewer</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">GitHub Repository Viewer</h1>
+        <div class="form-group">
+            <label for="username">GitHub Username:</label>
+            <input type="text" class="form-control" id="username" placeholder="Enter GitHub username">
+        </div>
+        <button class="btn btn-primary mb-4" onclick="getRepositories()">Get Repositories</button>
+        <div id="loader" class="d-none text-center">
+            <img src="loader.gif" alt="Loading...">
+        </div>
+        <div id="repositories" class="row"></div>
+        <nav aria-label="Page navigation">
+            <ul class="pagination justify-content-center" id="pagination"></ul>
+        </nav>
+    </div>
+</body>
+</html>
